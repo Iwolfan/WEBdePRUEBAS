@@ -1,0 +1,73 @@
+header{
+    background-color: oklch(82.08% 0.20357 154.268);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+footer{
+    background-color:  oklch(82.08% 0.20357 154.268);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}   
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+fieldset {
+    border: 2px solid #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+thead, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    text-align: center;
+}
+
+thead {
+    background-color: #4df001;
+}
+
+tbody tr:nth-child(even) {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+.fdh{
+	background-color: rgb(57, 224, 236);
+
+}
+
+.ldm{
+	background-color: blue;
+}
+
+.ipe{
+	background-color: orange;
+}
+
+.sistemas{ 
+	background-color: green;
+}
+
+.ingles{
+	background-color: pink;
+}
+
+.sostenibilidad{
+    background-color: yellow;
+}   
+
+.recreo{
+    background-color: #cc3eb9;
+    font-weight: bold;
+}
+
