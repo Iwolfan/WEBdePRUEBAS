@@ -1,0 +1,29 @@
+caption {
+    font-style: italic;
+}
+
+.tabla1 {
+    border: 2px solid blue;
+    padding: 15px;
+    margin-bottom: 20px;
+    td {
+        border: 2px solid blue;
+        padding: 15px;
+    }
+
+}
+
+.tabla2 {
+    border: 2px solid goldenrod;
+    border-collapse: collapse;
+    background-color: rgb(212, 206, 206);
+    td,th{
+        padding: 18px;
+        text-align: center;
+        border: 2px solid goldenrod;
+    }
+    .verde{
+        background-color: rgb(147, 192, 22);
+    }
+
+}

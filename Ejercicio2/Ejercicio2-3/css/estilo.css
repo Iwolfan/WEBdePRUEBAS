@@ -1,0 +1,23 @@
+body{
+    background-image: url("../img/img.jpg");
+    background-size: auto 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-position-y:bottom;
+    
+}
+
+.bloque1{
+    background-color: #758596f3;
+    color: white;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.bloque2{
+    background-color: #dfddb7e3 ;
+    padding: 10px;
+
+}

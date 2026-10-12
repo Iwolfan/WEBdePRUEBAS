@@ -1,0 +1,60 @@
+.encabezado {
+    display: block;
+    text-align: center; 
+}
+.encabezado h4{
+    font-size: 30px;
+    color: red;
+    display: inline-block;
+}
+.encabezado h2{
+    font-size: 20px;
+    color: black;
+    display: inline-block;
+
+}
+.boton {
+    background-color: rgb(226, 196, 22);
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+.grupo_cap4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.grupo_cap4 pre{
+    text-align: center;
+
+}
+.grupo_google{
+    display: flex;
+    align-items: center;
+}
+#cap4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(85, 129, 223);
+    border: 2px solid black;
+    margin-left: 30px;
+    margin-top: 60%;
+    padding-bottom: 20px;
+    
+}
+#cap4 .hipervinculo{
+    background-color: white;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    padding: 3px;
+}
+
+#cap4 .cap4{
+    margin-top: 0px;
+    margin-left: 30px;
+
+}
+
+

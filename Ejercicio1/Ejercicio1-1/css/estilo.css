@@ -1,0 +1,79 @@
+header{
+    background-color: oklch(82.08% 0.20357 154.268);
+    color: rgb(0, 0, 12);
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+    border: 2px solid rgb(1, 0, 7);
+}
+.cuadro {
+  width: 1400px;
+  min-height: 400px;
+  border: 2px solid rgb(39, 8, 236);
+  border-collapse: collapse;
+}
+
+.cuadro td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.cuadro h1 {
+  font-size: 24px;
+}
+
+.cuadro h2 {
+  font-size: 18px;
+  color:red;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.cuadro h2 + p {
+  margin-top: 150px;
+}
+
+.imagen-centro {
+    display: block;
+    margin: 0 auto;
+}
+
+.cuadro hr {
+    border: none;
+    border-top: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    margin: 30px 0 10px;
+}
+
+.hipervinculo {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid blue;
+    background-color: lightgray;
+    font-size: 10px;
+    padding: 4px 6px;
+}
+
+.hipervinculo p {
+    margin: 0;
+}
+
+.pdentro {font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-family: 'verdana', sans-serif;
+
+}
+
+.pfinal {
+    font-size: 10px;
+    
+}

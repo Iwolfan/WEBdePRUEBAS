@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="es">
-  <!-- Información del documento HTML -->
+
   <head>
     <meta charset="UTF-8" />
     <title>Horario</title>
-
-    <!-- en esta linea se enlaza el archivo de estilo (CSS)-->
     <link rel="stylesheet" href="css/estilo.css" />
   </head>
 
-  <!--------BODY--(CUERPO)----------------------------------------------------->
   <body>
-    <!-- HEADER (ENCABEZADO)-->
+
     <header>
       <h1>Mi primera WEB de Lenguajes de marcas</h1>
       <h2>Menu:</h2>
-      <nav>
-        <a href="index.html">Inicio</a>
-        <a href="horario.html">Horario</a>
-        <a href="formulario.html">Formulario</a>
-      </nav>
+      <div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="horario.html">Horario</a>
+          <a href="formulario.html">Formulario</a>
+          <a href="Ejercicio1\Ejercicio1-1\Ejercicio1-1.html">1-1</a>
+          <a href="Ejercicio1\Ejercicio1-2\Ejercicio1-2.html">1-2</a>
+          <a href="Ejercicio1\Ejercicio1-3\Ejercicio1-3.html">1-3</a>
+          <a href="Ejercicio2\Ejercicio2-1\Ejercicio2-1.html">2-1</a>
+          <a href="Ejercicio2\Ejercicio2-2\Ejercicio2-2.html">2-2</a>
+          <a href="Ejercicio2\Ejercicio2-3\Ejercicio2-3.html">2-3</a>     
+        </nav>
+      </div>  
     </header>
 
-    <!-- MAIN (CONTENIDO)-->
     <main>
       <h2>Horario Semanal</h2>
       <table>
@@ -44,10 +48,10 @@
           <tr>
             <td>8:30- 9:25</td>
 
-            <td class="fdh">Fundamentos de hardware</td>
+            <td class="hardware">Fundamentos de hardware</td>
             <td class="sostenibilidad">Sostenibilidad</td> 
             <td class="ldm"rowspan="2">Lenguajes de marcas</td>
-            <td class="ingles">Inglés</td>
+            <td class="LIBRE">LIBRE</td>
             <td rowspan="2">Planificación y administración de redes</td>
           </tr>
 
@@ -55,21 +59,20 @@
           <tr>
             <td>9:25-10:20</td>
 
-            <td rowspan="2">IPE</td>
-            <td class="ipe">IPE</td>
+            <td class="LIBRE" rowspan="2">LIBRE</td>
+            <td class="LIBRE">LIBRE</td>
             <!-- Miércoles ya está cubierto por el rowspan de arriba -->
-            <Td rowspan="2">Implantación de sistemas operativos</td>
+            <td class="sistemas" rowspan="2">Implantación de sistemas operativos</td>
             <!-- Viernes ya está cubierto por el rowspan de arriba -->
           </tr>
 
           <!-- 4º Fila (3ª hora) -->
           <tr>
             <td>10:20-11:15</td>
-
             <!-- ya está cubierto por el rowspan de arriba -->
-            <td>BBDD</td>
-            <td>Planificación y administración de redes</td>
-            <td>Fundamentos de hardware</td>
+            <td class="bbdd">BBDD</td>
+            <td class="redes">Planificación y administración de redes</td>
+            <td class="hardware">Fundamentos de hardware</td>
             <!-- ya está cubierto por el rowspan de arriba -->
           </tr>
 
@@ -85,22 +88,22 @@
           <tr>
             <td>11:45-12:40</td>
 
-            <td>Inglés</td>
-            <td>BBDD</td>
-            <td>Planificación y administración de redes</td>
-            <td rowspan="2">BBDD</td>
-            <td class="fdh">Fundamentos de hardware</td>
+            <td class="LIBRE">LIBRE</td>
+            <td class="bbdd">BBDD</td>
+            <td class="redes">Planificación y administración de redes</td>
+            <td class="bbdd" rowspan="2">BBDD</td>
+            <td class="hardware">Fundamentos de hardware</td>
           </tr>
 
           <!-- 7º Fila (5ª hora) -->
           <tr>
             <td>12:40-13:35</td>
 
-            <td rowspan="2">Implantación de sistemas operativos</td>
-            <td>Proyecto intermodular</td>
-            <td rowspan="2">Digitalización</td>
+            <td class="sistemas" rowspan="2">Implantación de sistemas operativos</td>
+            <td class="proyecto">Proyecto intermodular</td>
+            <td class="digitalizacion" rowspan="2">Digitalización</td>
             <!-- ya está cubierto por el rowspan de arriba -->
-            <td rowspan="2">Implantación de sistemas operativos</td>
+            <td class="sistemas" rowspan="2">Implantación de sistemas operativos</td>
           </tr>
 
           <!-- 8º Fila (6ª hora) -->
@@ -108,22 +111,21 @@
             <td>13:35-14:30</td>
 
             <!-- ya está cubierto por el rowspan de arriba -->
-            <td>Planificación y administración de redes</td>
+            <td class="redes">Planificación y administración de redes</td>
             <!-- ya está cubierto por el rowspan de arriba -->
-            <td>Lenguajes de marcas</td>
+            <td class="ldm">Lenguajes de marcas</td>
             <!-- ya está cubierto por el rowspan de arriba -->
           </tr>
         </tbody>
       </table>
     </main>
 
-    <!-- FOOTER (PIE DE PÁGINA)-->
     <footer>
       <p>CIFP Virgen de Gracia 1º ASIR</p>
       <p>
-        Contacto:
+        Contacto: ANDRÉS CAÑADAS ROPERO
         <a href="mailto:PONER AQUI TU CORREO ELECTRONICO "
-          >CORREO ELECTRONICO</a>
+          >andresc9r7@gmail.com</a>
       </p>
     </footer>
     <!--------------------------------------------------------------->

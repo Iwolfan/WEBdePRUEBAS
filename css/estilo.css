@@ -1,73 +1,131 @@
-header{
-    background-color: oklch(82.08% 0.20357 154.268);
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    text-align: center;
-    align-items: center;
+body{
+    background-color: #0F172A;
 }
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #1E293B;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 170px;
+    color: #94A3B8;
+    div a{
+        border: none;
+        border-radius: 10px;
+        background-color: #334155;
+        padding: 10px;
+        text-decoration: none;
+        color: #F1F5F9;
+        margin-top: 20px;
+    }
+}
+
+h2{
+    color: #F1F5F9;
+    margin: 10px;
+}
+
+main{
+    background-color: #1F2937;
+    color: #F1F5F9;
+}
+
+table{
+	width: 100%;
+	table-layout: fixed;
+	padding: 5px;
+	thead{
+		background-color: #1F2937;
+		font-size: 24px;
+		text-align: center;
+		font-weight: bold;
+		table-layout: fixed;
+        color: #94A3B8;
+	}
+
+	tbody{
+		background-color: #334155;
+		align-items: center;
+		text-align: center;
+		table-layout: fixed;
+	}
+	tr{
+		height: 80px;
+		font-size: clamp(16px, 1.5vw, 30px);
+		word-break: break-word;
+	}
+}
+
+.hardware {
+  background-color: #1D4ED8;
+  color: #DBEAFE;
+}
+
+.sostenibilidad {
+  background-color: #166534;
+  color: #DCFCE7;
+}
+
+.ldm {
+  background-color: #7E22CE;
+  color: #F3E8FF;
+}
+
+.LIBRE {
+  background-color: #475569;
+  color: #F1F5F9;
+}
+
+.recreo {
+  background-color: #9A3412;
+  color: #FFEDD5;
+}
+
+.sistemas {
+  background-color: #0E7490;
+  color: #CFFAFE;
+}
+
+.bbdd {
+  background-color: #4338CA;
+  color: #E0E7FF;
+}
+
+.redes {
+  background-color: #0F766E;
+  color: #CCFBF1;
+}
+
+.proyecto {
+  background-color: #A16207;
+  color: #FEF3C7;
+}
+
+.digitalizacion {
+  background-color: #BE185D;
+  color: #FCE7F3;
+}
+
+fieldset{
+    background-color: #334155;
+}
+
 
 footer{
-    background-color:  oklch(82.08% 0.20357 154.268);
-    color: white;
-    padding: 10px;
+    background-color: #1E293B;
+    border: none;
+    border-radius: 20px;
+    justify-content: center;
     text-align: center;
-}   
-
-table {
     width: 100%;
-    border-collapse: collapse;
-}
-
-fieldset {
-    border: 2px solid #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-thead, th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-    text-align: center;
-}
-
-thead {
-    background-color: #4df001;
-}
-
-tbody tr:nth-child(even) {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0; 
-}
-
-.fdh{
-	background-color: rgb(57, 224, 236);
-
-}
-
-.ldm{
-	background-color: blue;
-}
-
-.ipe{
-	background-color: orange;
-}
-
-.sistemas{ 
-	background-color: green;
-}
-
-.ingles{
-	background-color: pink;
-}
-
-.sostenibilidad{
-    background-color: yellow;
-}   
-
-.recreo{
-    background-color: #cc3eb9;
-    font-weight: bold;
+    height: 70px;
+    color: #94A3B8;
+    a{
+        color: #F1F5F9;
+    }
 }
 
