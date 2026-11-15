@@ -24,6 +24,7 @@
     border-radius: 12px;
     padding: 0 15px;
     margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 /* Teclado: rejilla de 4 columnas iguales */
@@ -72,9 +73,20 @@
     background-color: #15803D;
 }
 
-/* Borrar: naranja, ocupa las 4 columnas */
+/* Puesta a cero AC: gris oscuro */
+.teclado .poner-cero {
+    grid-column: span 2;
+    background-color: #475569;
+    color: #F8FAFC;
+}
+
+.teclado .poner-cero:hover {
+    background-color: #64748B;
+}
+
+/* Borrar: naranja */
 .teclado .borrar {
-    grid-column: 1 / -1;
+    grid-column: span 2;
     background-color: #9A3412;
     color: #FFEDD5;
 }

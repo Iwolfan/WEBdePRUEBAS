@@ -49,3 +49,9 @@ function borrar() {
         pantalla.value = "0";
     }
 }
+function ponerACero() {
+    let pantalla = document.getElementById("pantalla");
+
+    // Reinicia completamente la calculadora
+    pantalla.value = "0";
+}

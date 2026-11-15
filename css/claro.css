@@ -1,14 +1,19 @@
-/* Modo claro: solo cambia las variables de color */
+/* Modo claro: azul grisáceo más oscuro */
 :root {
-    --fondo: #F1F5F9;
-    --tarjeta: #FFFFFF;
-    --contenido: #E2E8F0;
-    --boton: #CBD5E1;
-    --boton-hover: #94A3B8;
-    --texto: #0F172A;
-    --texto-suave: #475569;
-    --sombra: 0 6px 16px rgba(15, 23, 42, 0.15);
-    --degradado: linear-gradient(135deg, #E2E8F0, #CBD5E1);
-    --enlace: #1D4ED8;
-    --enlace-hover: #9A3412;
+    --fondo: #9AAFC3;
+    --tarjeta: #B0C2D3;
+    --contenido: #A3B8CC;
+
+    --boton: #8FAAC3;
+    --boton-hover: #7E9CB8;
+
+    --texto: #203A54;
+    --texto-suave: #344F69;
+
+    --sombra: 0 5px 14px rgba(30, 50, 75, 0.20);
+
+    --degradado: linear-gradient(135deg, #A6BACD, #91A9C0);
+
+    --enlace: #244F76;
+    --enlace-hover: #173A5A;
 }
