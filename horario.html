@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <title>Horario</title>
     <link rel="stylesheet" href="css/estilo.css" />
+    <link id="tema-claro" rel="stylesheet" href="css/claro.css" disabled />
+    <script src="js/cambiarmodo.js"></script>
   </head>
 
   <body>
@@ -12,19 +14,32 @@
     <header>
       <h1>Mi primera WEB de Lenguajes de marcas</h1>
       <h2>Menu:</h2>
-      <div>
-        <nav>
-          <a href="index.html">Inicio</a>
-          <a href="horario.html">Horario</a>
-          <a href="formulario.html">Formulario</a>
-          <a href="Ejercicio1\Ejercicio1-1\Ejercicio1-1.html">1-1</a>
-          <a href="Ejercicio1\Ejercicio1-2\Ejercicio1-2.html">1-2</a>
-          <a href="Ejercicio1\Ejercicio1-3\Ejercicio1-3.html">1-3</a>
-          <a href="Ejercicio2\Ejercicio2-1\Ejercicio2-1.html">2-1</a>
-          <a href="Ejercicio2\Ejercicio2-2\Ejercicio2-2.html">2-2</a>
-          <a href="Ejercicio2\Ejercicio2-3\Ejercicio2-3.html">2-3</a>     
-        </nav>
-      </div>  
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="horario.html" class="activo">Horario</a>
+        <a href="formulario.html">Formulario</a>
+    
+        <div class="desplegable">
+          <span class="titulo" tabindex="0">Ejercicios tema 1</span>
+          <div class="submenu">
+            <a href="Ejercicio1/Ejercicio1-1/Ejercicio1-1.html">Ejercicio 1-1</a>
+            <a href="Ejercicio1/Ejercicio1-2/Ejercicio1-2.html">Ejercicio 1-2</a>
+            <a href="Ejercicio1/Ejercicio1-3/Ejercicio1-3.html">Ejercicio 1-3</a>
+            <a href="Ejercicio2/Ejercicio2-1/Ejercicio2-1.html">Ejercicio 2-1</a>
+            <a href="Ejercicio2/Ejercicio2-2/Ejercicio2-2.html">Ejercicio 2-2</a>
+            <a href="Ejercicio2/Ejercicio2-3/Ejercicio2-3.html">Ejercicio 2-3</a>
+          </div>
+        </div>
+    
+        <div class="desplegable">
+          <span class="titulo" tabindex="0">Ejercicios tema 3</span>
+          <div class="submenu">
+            <a href="Calculadora/calculadora.html">Calculadora</a>
+            <a href="Juego/juego.html">Juego</a>
+          </div>
+        </div>
+        <button type="button" class="boton-modo" onclick="cambiarModo()">Modo claro / oscuro</button>
+      </nav>
     </header>
 
     <main>
@@ -128,6 +143,5 @@
           >andresc9r7@gmail.com</a>
       </p>
     </footer>
-    <!--------------------------------------------------------------->
   </body>
 </html>

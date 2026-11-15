@@ -1,131 +1,315 @@
-body{
-    background-color: #0F172A;
+/* ============ VARIABLES (paleta de colores) ============ */
+:root {
+    --fondo: #0F172A;
+    --tarjeta: #1E293B;
+    --contenido: #1F2937;
+    --boton: #334155;
+    --boton-hover: #475569;
+    --texto: #F1F5F9;
+    --texto-suave: #94A3B8;
+    --azul: #1D4ED8;
+    --azul-claro: #DBEAFE;
+    --sombra: 0 6px 16px rgba(0, 0, 0, 0.35);
+    --degradado: linear-gradient(135deg, #1E293B, #334155);
+    --enlace: #DBEAFE;
+    --enlace-hover: #FFEDD5;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    background-color: #1E293B;
-    border: none;
-    border-radius: 20px;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 170px;
-    color: #94A3B8;
-    div a{
-        border: none;
-        border-radius: 10px;
-        background-color: #334155;
-        padding: 10px;
-        text-decoration: none;
-        color: #F1F5F9;
-        margin-top: 20px;
-    }
+/* ============ BASE ============ */
+* {
+    box-sizing: border-box;
 }
 
-h2{
-    color: #F1F5F9;
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: var(--texto);
     margin: 10px;
 }
 
-main{
-    background-color: #1F2937;
-    color: #F1F5F9;
+/* Contorno visible al navegar con el teclado */
+a:focus-visible,
+.titulo:focus-visible,
+.boton-modo:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--azul-claro);
+    outline-offset: 2px;
 }
 
-table{
-	width: 100%;
-	table-layout: fixed;
-	padding: 5px;
-	thead{
-		background-color: #1F2937;
-		font-size: 24px;
-		text-align: center;
-		font-weight: bold;
-		table-layout: fixed;
-        color: #94A3B8;
-	}
-
-	tbody{
-		background-color: #334155;
-		align-items: center;
-		text-align: center;
-		table-layout: fixed;
-	}
-	tr{
-		height: 80px;
-		font-size: clamp(16px, 1.5vw, 30px);
-		word-break: break-word;
-	}
+/* ============ HEADER ============ */
+header {
+    background: var(--degradado);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--texto-suave);
+    box-shadow: var(--sombra);
 }
 
+header h1 {
+    color: var(--texto);
+    font-size: clamp(24px, 4vw, 40px);
+    margin: 0 0 10px 0;
+}
+
+header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* ============ MENÚ ============ */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+header nav a,
+.titulo {
+    background-color: var(--boton);
+    color: var(--texto);
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header nav a:hover,
+.titulo:hover {
+    background-color: var(--boton-hover);
+    transform: translateY(-2px);
+}
+
+/* Página actual */
+header nav a.activo {
+    background-color: var(--azul);
+    color: var(--azul-claro);
+}
+
+/* ============ BOTÓN MODO CLARO / OSCURO ============ */
+.boton-modo {
+    background-color: var(--boton);
+    color: var(--texto);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-modo:hover {
+    background-color: var(--boton-hover);
+    transform: translateY(-2px);
+}
+
+/* ============ DESPLEGABLES (se abren al pasar el ratón) ============ */
+.desplegable {
+    position: relative;
+}
+
+.titulo {
+    display: block;
+    user-select: none;
+}
+
+.titulo::after {
+    content: " ▾";
+}
+
+/* El botón se pone azul mientras el menú está abierto */
+.desplegable:hover .titulo,
+.desplegable:focus-within .titulo {
+    background-color: var(--azul);
+    color: var(--azul-claro);
+}
+
+/* La lista está oculta por defecto */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 170px;
+    padding: 10px;
+    background-color: var(--fondo);
+    border: 1px solid var(--boton);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    z-index: 10;
+}
+
+/* ...y aparece al pasar el ratón (o al enfocar con el teclado) */
+.desplegable:hover .submenu,
+.desplegable:focus-within .submenu {
+    display: block;
+}
+
+header nav .submenu a {
+    display: block;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+header nav .submenu a:last-child {
+    margin-bottom: 0;
+}
+
+/* ============ MAIN ============ */
+main {
+    background-color: var(--contenido);
+    color: var(--texto);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: var(--sombra);
+}
+
+main a {
+    color: var(--enlace);
+}
+
+main a:hover {
+    color: var(--enlace-hover);
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+/* ============ TABLAS ============ */
+table {
+    width: 100%;
+    table-layout: fixed;
+    padding: 5px;
+}
+
+table thead {
+    background-color: var(--contenido);
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--texto-suave);
+}
+
+table tbody {
+    background-color: var(--boton);
+    text-align: center;
+}
+
+table tr {
+    height: 80px;
+    font-size: clamp(16px, 1.5vw, 30px);
+    word-break: break-word;
+}
+
+/* ============ COLORES DEL HORARIO ============ */
 .hardware {
-  background-color: #1D4ED8;
-  color: #DBEAFE;
+    background-color: #1D4ED8;
+    color: #DBEAFE;
 }
 
 .sostenibilidad {
-  background-color: #166534;
-  color: #DCFCE7;
+    background-color: #166534;
+    color: #DCFCE7;
 }
 
 .ldm {
-  background-color: #7E22CE;
-  color: #F3E8FF;
+    background-color: #7E22CE;
+    color: #F3E8FF;
 }
 
 .LIBRE {
-  background-color: #475569;
-  color: #F1F5F9;
+    background-color: #475569;
+    color: #F1F5F9;
 }
 
 .recreo {
-  background-color: #9A3412;
-  color: #FFEDD5;
+    background-color: #9A3412;
+    color: #FFEDD5;
 }
 
 .sistemas {
-  background-color: #0E7490;
-  color: #CFFAFE;
+    background-color: #0E7490;
+    color: #CFFAFE;
 }
 
 .bbdd {
-  background-color: #4338CA;
-  color: #E0E7FF;
+    background-color: #4338CA;
+    color: #E0E7FF;
 }
 
 .redes {
-  background-color: #0F766E;
-  color: #CCFBF1;
+    background-color: #0F766E;
+    color: #CCFBF1;
 }
 
 .proyecto {
-  background-color: #A16207;
-  color: #FEF3C7;
+    background-color: #A16207;
+    color: #FEF3C7;
 }
 
 .digitalizacion {
-  background-color: #BE185D;
-  color: #FCE7F3;
+    background-color: #BE185D;
+    color: #FCE7F3;
 }
 
-fieldset{
-    background-color: #334155;
+/* ============ FORMULARIO ============ */
+fieldset {
+    background-color: var(--boton);
 }
 
-
-footer{
-    background-color: #1E293B;
-    border: none;
+/* ============ FOOTER ============ */
+footer {
+    background-color: var(--tarjeta);
     border-radius: 20px;
-    justify-content: center;
+    padding: 15px 20px;
     text-align: center;
-    width: 100%;
-    height: 70px;
-    color: #94A3B8;
-    a{
-        color: #F1F5F9;
+    color: var(--texto-suave);
+    box-shadow: var(--sombra);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--texto);
+}
+
+/* ============ DISEÑO ADAPTABLE ============ */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    table thead {
+        font-size: 16px;
     }
 }
-

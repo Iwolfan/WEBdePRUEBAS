@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Piedra, Papel o Tijera</title>
+        <link rel="stylesheet" href="../css/estilo.css" />
+        <link rel="stylesheet" href="juego.css" />
+        <link id="tema-claro" rel="stylesheet" href="../css/claro.css" disabled />
+        <script src="../js/cambiarmodo.js"></script>
+        <script src="juego.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Mi primera WEB de Lenguajes de marcas</h1>
+            <h2>Menu:</h2>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="../horario.html">Horario</a>
+                <a href="../formulario.html">Formulario</a>
+
+                <div class="desplegable">
+                <span class="titulo" tabindex="0">Ejercicios tema 1</span>
+                <div class="submenu">
+                    <a href="../Ejercicio1/Ejercicio1-1/Ejercicio1-1.html">Ejercicio 1-1</a>
+                    <a href="../Ejercicio1/Ejercicio1-2/Ejercicio1-2.html">Ejercicio 1-2</a>
+                    <a href="../Ejercicio1/Ejercicio1-3/Ejercicio1-3.html">Ejercicio 1-3</a>
+                    <a href="../Ejercicio2/Ejercicio2-1/Ejercicio2-1.html">Ejercicio 2-1</a>
+                    <a href="../Ejercicio2/Ejercicio2-2/Ejercicio2-2.html">Ejercicio 2-2</a>
+                    <a href="../Ejercicio2/Ejercicio2-3/Ejercicio2-3.html">Ejercicio 2-3</a>
+                </div>
+                </div>
+
+                <div class="desplegable">
+                <span class="titulo" tabindex="0">Ejercicios tema 3</span>
+                <div class="submenu">
+                    <a href="../Calculadora/calculadora.html">Calculadora</a>
+                    <a href="juego.html" class="activo">Juego</a>
+                </div>
+                </div>
+                <button type="button" class="boton-modo" onclick="cambiarModo()">Modo claro / oscuro</button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="juego">
+                <h2>Piedra, Papel o Tijera</h2>
+                <p class="instrucciones">Elige una opción y juega contra la máquina.</p>
+
+                <div class="opciones">
+                <button type="button" onclick="juego('piedra')">✊ Piedra</button>
+                <button type="button" onclick="juego('papel')">✋ Papel</button>
+                <button type="button" onclick="juego('tijera')">✌️ Tijera</button>
+                </div>
+
+                <div class="marcador">
+                <p id="marcador">Partidas jugadas: 0</p>
+                <p id="ganadas">Partidas ganadas: 0</p>
+                <p id="empatadas">Partidas empatadas: 0</p>
+                <p id="perdidas">Partidas perdidas: 0</p>
+                <p id="porcentajeVictorias">% de victorias: 0%</p>
+                </div>
+
+                <div id="resultado">
+                <h3>Resultado</h3>
+                <p id="jugada-jugador">Tu jugada aparecerá aquí.</p>
+                <p id="jugada-maquina">La jugada de la máquina aparecerá aquí.</p>
+                <p id="mensaje"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>CIFP Virgen de Gracia 1º ASIR</p>
+            <p>
+                Contacto: ANDRÉS CAÑADAS ROPERO
+                <a href="mailto:andresc9r7@gmail.com">andresc9r7@gmail.com</a>
+            </p>
+        </footer>
+    </body>
+</html>

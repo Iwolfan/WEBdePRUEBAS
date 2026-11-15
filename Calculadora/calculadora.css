@@ -1,0 +1,84 @@
+.calculadora {
+    max-width: 340px;
+    margin: 0 auto;
+    background-color: var(--tarjeta);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--sombra);
+}
+
+.calculadora h2 {
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+/* Pantalla */
+#pantalla {
+    width: 100%;
+    height: 70px;
+    font-size: 32px;
+    text-align: right;
+    background-color: var(--fondo);
+    color: var(--texto);
+    border: none;
+    border-radius: 12px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+/* Teclado: rejilla de 4 columnas iguales */
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.teclado button {
+    height: 60px;
+    font-size: 22px;
+    background-color: var(--boton);
+    color: var(--texto);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.teclado button:hover {
+    background-color: var(--boton-hover);
+}
+
+.teclado button:active {
+    transform: scale(0.95);
+}
+
+/* Operadores: azul */
+.teclado .operador {
+    background-color: #1D4ED8;
+    color: #DBEAFE;
+}
+
+.teclado .operador:hover {
+    background-color: #2563EB;
+}
+
+/* Igual: verde */
+.teclado .igual {
+    background-color: #166534;
+    color: #DCFCE7;
+}
+
+.teclado .igual:hover {
+    background-color: #15803D;
+}
+
+/* Borrar: naranja, ocupa las 4 columnas */
+.teclado .borrar {
+    grid-column: 1 / -1;
+    background-color: #9A3412;
+    color: #FFEDD5;
+}
+
+.teclado .borrar:hover {
+    background-color: #C2410C;
+}
